@@ -1,0 +1,426 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:ap-southeast-1:494958051009:task-definition/sample-queue-taskdef-dev:609",
+    "containerDefinitions": [
+        {
+            "name": "sample-container-dev",
+            "image": "494958051009.dkr.ecr.ap-southeast-1.amazonaws.com/sample-repo-dev:4e45cb2",
+            "cpu": 0,
+            "memoryReservation": 1024,
+            "portMappings": [
+                {
+                    "containerPort": 80,
+                    "hostPort": 80,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "environment": [
+                {
+                    "name": "CONTAINER_ROLE",
+                    "value": "queue"
+                }
+            ],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "secrets": [
+                {
+                    "name": "ANDROID_APP_LINK",
+                    "valueFrom": "/sample/dev/ANDROID_APP_LINK"
+                },
+                {
+                    "name": "APP_DEBUG",
+                    "valueFrom": "/sample/dev/APP_DEBUG"
+                },
+                {
+                    "name": "APP_ENV",
+                    "valueFrom": "/sample/dev/APP_ENV"
+                },
+                {
+                    "name": "APP_KEY",
+                    "valueFrom": "/sample/dev/APP_KEY"
+                },
+                {
+                    "name": "APP_NAME",
+                    "valueFrom": "/sample/dev/APP_NAME"
+                },
+                {
+                    "name": "APP_URL",
+                    "valueFrom": "/sample/dev/APP_URL"
+                },
+                {
+                    "name": "ASSET_URL",
+                    "valueFrom": "/sample/dev/ASSET_URL"
+                },
+                {
+                    "name": "AWS_ACCESS_KEY_ID",
+                    "valueFrom": "/sample/dev/AWS_ACCESS_KEY_ID"
+                },
+                {
+                    "name": "AWS_BUCKET",
+                    "valueFrom": "/sample/dev/AWS_BUCKET"
+                },
+                {
+                    "name": "AWS_DEFAULT_REGION",
+                    "valueFrom": "/sample/dev/AWS_DEFAULT_REGION"
+                },
+                {
+                    "name": "AWS_SECRET_ACCESS_KEY",
+                    "valueFrom": "/sample/dev/AWS_SECRET_ACCESS_KEY"
+                },
+                {
+                    "name": "AWS_SES_CONFIG_SET",
+                    "valueFrom": "/sample/dev/AWS_SES_CONFIG_SET"
+                },
+                {
+                    "name": "AWS_URL",
+                    "valueFrom": "/sample/dev/AWS_URL"
+                },
+                {
+                    "name": "BROADCAST_DRIVER",
+                    "valueFrom": "/sample/dev/BROADCAST_DRIVER"
+                },
+                {
+                    "name": "CACHE_DRIVER",
+                    "valueFrom": "/sample/dev/CACHE_DRIVER"
+                },
+                {
+                    "name": "CLOUDWATCH_GROUP",
+                    "valueFrom": "/sample/dev/CLOUDWATCH_GROUP"
+                },
+                {
+                    "name": "CLOUDWATCH_REGION",
+                    "valueFrom": "/sample/dev/CLOUDWATCH_REGION"
+                },
+                {
+                    "name": "CLOUDWATCH_RETENTION",
+                    "valueFrom": "/sample/dev/CLOUDWATCH_RETENTION"
+                },
+                {
+                    "name": "CLOUDWATCH_STREAM",
+                    "valueFrom": "/sample/dev/CLOUDWATCH_STREAM"
+                },
+                {
+                    "name": "DB_CONNECTION",
+                    "valueFrom": "/sample/dev/DB_CONNECTION"
+                },
+                {
+                    "name": "DB_DATABASE",
+                    "valueFrom": "/sample/dev/DB_DATABASE"
+                },
+                {
+                    "name": "DB_HOST",
+                    "valueFrom": "/sample/dev/DB_HOST"
+                },
+                {
+                    "name": "DB_PASSWORD",
+                    "valueFrom": "/sample/dev/DB_PASSWORD"
+                },
+                {
+                    "name": "DB_PORT",
+                    "valueFrom": "/sample/dev/DB_PORT"
+                },
+                {
+                    "name": "DB_USERNAME",
+                    "valueFrom": "/sample/dev/DB_USERNAME"
+                },
+                {
+                    "name": "DEAL_BASE_URL",
+                    "valueFrom": "/sample/dev/DEAL_BASE_URL"
+                },
+                {
+                    "name": "DEAL_THUMBNAIL_ASSET_BASE_URL",
+                    "valueFrom": "/sample/dev/DEAL_THUMBNAIL_ASSET_BASE_URL"
+                },
+                {
+                    "name": "DOMAIN_TYPE",
+                    "valueFrom": "/sample/dev/DOMAIN_TYPE"
+                },
+                {
+                    "name": "DYNAMODB_AWS_KEY",
+                    "valueFrom": "/sample/dev/DYNAMODB_AWS_KEY"
+                },
+                {
+                    "name": "DYNAMODB_AWS_REGION",
+                    "valueFrom": "/sample/dev/DYNAMODB_AWS_REGION"
+                },
+                {
+                    "name": "DYNAMODB_AWS_SECRET_KEY",
+                    "valueFrom": "/sample/dev/DYNAMODB_AWS_SECRET_KEY"
+                },
+                {
+                    "name": "DYNAMODB_AWS_VERSION",
+                    "valueFrom": "/sample/dev/DYNAMODB_AWS_VERSION"
+                },
+                {
+                    "name": "FILESYSTEM_DRIVER",
+                    "valueFrom": "/sample/dev/FILESYSTEM_DRIVER"
+                },
+                {
+                    "name": "HUAWEI_APP_LINK",
+                    "valueFrom": "/sample/dev/HUAWEI_APP_LINK"
+                },
+                {
+                    "name": "IOS_APP_LINK",
+                    "valueFrom": "/sample/dev/IOS_APP_LINK"
+                },
+                {
+                    "name": "LARAVEL_WEBSOCKETS_ENCRYPTED",
+                    "valueFrom": "/sample/dev/LARAVEL_WEBSOCKETS_ENCRYPTED"
+                },
+                {
+                    "name": "LARAVEL_WEBSOCKETS_PORT",
+                    "valueFrom": "/sample/dev/LARAVEL_WEBSOCKETS_PORT"
+                },
+                {
+                    "name": "LARAVEL_WEBSOCKETS_SCHEME",
+                    "valueFrom": "/sample/dev/LARAVEL_WEBSOCKETS_SCHEME"
+                },
+                {
+                    "name": "LARAVEL_WEBSOCKETS_SSL_LOCAL_CERT",
+                    "valueFrom": "/sample/dev/LARAVEL_WEBSOCKETS_SSL_LOCAL_CERT"
+                },
+                {
+                    "name": "LARAVEL_WEBSOCKETS_SSL_LOCAL_PK",
+                    "valueFrom": "/sample/dev/LARAVEL_WEBSOCKETS_SSL_LOCAL_PK"
+                },
+                {
+                    "name": "LARAVEL_WEBSOCKETS_SSL_PASSPHRASE",
+                    "valueFrom": "/sample/dev/LARAVEL_WEBSOCKETS_SSL_PASSPHRASE"
+                },
+                {
+                    "name": "LARAVEL_WEBSOCKETS_URL",
+                    "valueFrom": "/sample/dev/LARAVEL_WEBSOCKETS_URL"
+                },
+                {
+                    "name": "LOCAL_FILESYSTEM_DRIVER",
+                    "valueFrom": "/sample/dev/LOCAL_FILESYSTEM_DRIVER"
+                },
+                {
+                    "name": "LOG_CHANNEL",
+                    "valueFrom": "/sample/dev/LOG_CHANNEL"
+                },
+                {
+                    "name": "LOG_LEVEL",
+                    "valueFrom": "/sample/dev/LOG_LEVEL"
+                },
+                {
+                    "name": "MAIL_ENCRYPTION",
+                    "valueFrom": "/sample/dev/MAIL_ENCRYPTION"
+                },
+                {
+                    "name": "MAIL_FROM_ADDRESS",
+                    "valueFrom": "/sample/dev/MAIL_FROM_ADDRESS"
+                },
+                {
+                    "name": "MAIL_FROM_NAME",
+                    "valueFrom": "/sample/dev/MAIL_FROM_NAME"
+                },
+                {
+                    "name": "MAIL_HOST",
+                    "valueFrom": "/sample/dev/MAIL_HOST"
+                },
+                {
+                    "name": "MAIL_MAILER",
+                    "valueFrom": "/sample/dev/MAIL_MAILER"
+                },
+                {
+                    "name": "MAIL_PASSWORD",
+                    "valueFrom": "/sample/dev/MAIL_PASSWORD"
+                },
+                {
+                    "name": "MAIL_PORT",
+                    "valueFrom": "/sample/dev/MAIL_PORT"
+                },
+                {
+                    "name": "MAIL_USERNAME",
+                    "valueFrom": "/sample/dev/MAIL_USERNAME"
+                },
+                {
+                    "name": "MEDIA_ASSET_URL",
+                    "valueFrom": "/sample/dev/MEDIA_ASSET_URL"
+                },
+                {
+                    "name": "MIX_LARAVEL_WEBSOCKETS_ENCRYPTED",
+                    "valueFrom": "/sample/dev/MIX_LARAVEL_WEBSOCKETS_ENCRYPTED"
+                },
+                {
+                    "name": "MIX_LARAVEL_WEBSOCKETS_PORT",
+                    "valueFrom": "/sample/dev/MIX_LARAVEL_WEBSOCKETS_PORT"
+                },
+                {
+                    "name": "MIX_PUSHER_APP_CLUSTER",
+                    "valueFrom": "/sample/dev/MIX_PUSHER_APP_CLUSTER"
+                },
+                {
+                    "name": "MIX_PUSHER_APP_KEY",
+                    "valueFrom": "/sample/dev/MIX_PUSHER_APP_KEY"
+                },
+                {
+                    "name": "MOBILE_APP_UPDATED_DATE",
+                    "valueFrom": "/sample/dev/MOBILE_APP_UPDATED_DATE"
+                },
+                {
+                    "name": "MOBILE_APP_VERSION",
+                    "valueFrom": "/sample/dev/MOBILE_APP_VERSION"
+                },
+                {
+                    "name": "NO_REPLY_FROM_ADDRESS",
+                    "valueFrom": "/sample/dev/NO_REPLY_FROM_ADDRESS"
+                },
+                {
+                    "name": "OCTANE_HTTPS",
+                    "valueFrom": "/sample/dev/OCTANE_HTTPS"
+                },
+                {
+                    "name": "OCTANE_SERVER",
+                    "valueFrom": "/sample/dev/OCTANE_SERVER"
+                },
+                {
+                    "name": "PUSHER_APP_CLUSTER",
+                    "valueFrom": "/sample/dev/PUSHER_APP_CLUSTER"
+                },
+                {
+                    "name": "PUSHER_APP_ID",
+                    "valueFrom": "/sample/dev/PUSHER_APP_ID"
+                },
+                {
+                    "name": "PUSHER_APP_KEY",
+                    "valueFrom": "/sample/dev/PUSHER_APP_KEY"
+                },
+                {
+                    "name": "PUSHER_APP_SECRET",
+                    "valueFrom": "/sample/dev/PUSHER_APP_SECRET"
+                },
+                {
+                    "name": "QUEUE_CONNECTION",
+                    "valueFrom": "/sample/dev/QUEUE_CONNECTION"
+                },
+                {
+                    "name": "REDIS_CLIENT",
+                    "valueFrom": "/sample/dev/REDIS_CLIENT"
+                },
+                {
+                    "name": "REDIS_HOST",
+                    "valueFrom": "/sample/dev/REDIS_HOST"
+                },
+                {
+                    "name": "REDIS_PASSWORD",
+                    "valueFrom": "/sample/dev/REDIS_PASSWORD"
+                },
+                {
+                    "name": "REDIS_PORT",
+                    "valueFrom": "/sample/dev/REDIS_PORT"
+                },
+                {
+                    "name": "REDIS_PREFIX",
+                    "valueFrom": "/sample/dev/REDIS_PREFIX"
+                },
+                {
+                    "name": "SES_MAIL_ENCRYPTION",
+                    "valueFrom": "/sample/dev/SES_MAIL_ENCRYPTION"
+                },
+                {
+                    "name": "SES_MAIL_FROM_ADDRESS",
+                    "valueFrom": "/sample/dev/SES_MAIL_FROM_ADDRESS"
+                },
+                {
+                    "name": "SES_MAIL_FROM_NAME",
+                    "valueFrom": "/sample/dev/SES_MAIL_FROM_NAME"
+                },
+                {
+                    "name": "SES_MAIL_HOST",
+                    "valueFrom": "/sample/dev/SES_MAIL_HOST"
+                },
+                {
+                    "name": "SES_MAIL_MAILER",
+                    "valueFrom": "/sample/dev/SES_MAIL_MAILER"
+                },
+                {
+                    "name": "SES_MAIL_PASSWORD",
+                    "valueFrom": "/sample/dev/SES_MAIL_PASSWORD"
+                },
+                {
+                    "name": "SES_MAIL_PORT",
+                    "valueFrom": "/sample/dev/SES_MAIL_PORT"
+                },
+                {
+                    "name": "SES_MAIL_USERNAME",
+                    "valueFrom": "/sample/dev/SES_MAIL_USERNAME"
+                },
+                {
+                    "name": "SESSION_DRIVER",
+                    "valueFrom": "/sample/dev/SESSION_DRIVER"
+                },
+                {
+                    "name": "SESSION_LIFETIME",
+                    "valueFrom": "/sample/dev/SESSION_LIFETIME"
+                },
+                {
+                    "name": "TELESCOPE_ENABLED",
+                    "valueFrom": "/sample/dev/TELESCOPE_ENABLED"
+                }
+            ],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "/ecs/sample-queue-taskdef-dev",
+                    "awslogs-region": "ap-southeast-1",
+                    "awslogs-stream-prefix": "ecs"
+                }
+            },
+            "systemControls": []
+        }
+    ],
+    "family": "sample-queue-taskdef-dev",
+    "taskRoleArn": "arn:aws:iam::494958051009:role/sample-ecs-task-role",
+    "executionRoleArn": "arn:aws:iam::494958051009:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "revision": 609,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+        },
+        {
+            "name": "ecs.capability.execution-role-awslogs"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.task-iam-role"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
+        },
+        {
+            "name": "ecs.capability.secrets.ssm.environment-variables"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2",
+        "FARGATE"
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "512",
+    "memory": "1024",
+    "registeredAt": "2024-07-21T23:38:21.508Z",
+    "registeredBy": "arn:aws:sts::494958051009:assumed-role/AWSCodePipelineServiceRole-ap-southeast-1-sample-pipeline-dev/1721605101234",
+    "tags": []
+}
