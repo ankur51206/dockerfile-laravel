@@ -1,4 +1,5 @@
 #!/bin/sh
+# If you have queue container seperate, then follow ecs-structure directory's run.sh file.
 
 cd /var/www
 
